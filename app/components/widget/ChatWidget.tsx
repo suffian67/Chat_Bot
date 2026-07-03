@@ -9,10 +9,13 @@ interface Props {
 
     websiteId: string;
 
+    onClose(): void;
+
 }
 
 export default function ChatWidget({
-    websiteId
+    websiteId,
+    onClose
 }: Props) {
 
     const {
@@ -29,11 +32,14 @@ export default function ChatWidget({
 
     return (
 
-        <div>
+        <div className="chat-widget">
 
             <ChatHeader
                 onNewChat={clearConversation}
+
+                onClose={onClose}
             />
+
 
             <ChatWindow
 
@@ -41,11 +47,18 @@ export default function ChatWidget({
 
                 loading={loading}
 
+                onSelect={sendMessage}
+
+                onNewChat={clearConversation}
+
             />
 
             <ChatInput
-                onSend={sendMessage}
+
                 loading={loading}
+
+                onSend={sendMessage}
+
             />
 
         </div>

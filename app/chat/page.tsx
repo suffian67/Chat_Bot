@@ -1,12 +1,17 @@
-import ChatWidget from "../components/chat/ChatWidget";
 
 export default function Page() {
 
     return (
 
-        <ChatWidget
-            websiteId="freight-world"
-        />
+        <div>
+
+            <h1>Widget Playground</h1>
+
+            {/* <ChatLauncher
+                websiteId="freight-world"
+            /> */}
+
+        </div>
 
     );
 

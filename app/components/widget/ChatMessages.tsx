@@ -13,7 +13,7 @@ export default function ChatMessages({
 
     return (
 
-        <>
+        <div className="chat-messages">
 
             {messages.map((message, index) => (
 
@@ -25,11 +25,13 @@ export default function ChatMessages({
 
                     content={message.content}
 
+                    createdAt={message.createdAt}
+
                 />
 
             ))}
 
-        </>
+        </div>
 
     );
 

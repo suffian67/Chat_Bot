@@ -4,4 +4,6 @@ export interface UIChatMessage {
 
     content: string;
 
+    createdAt: Date;
+
 }

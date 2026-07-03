@@ -27,18 +27,15 @@ export default function useChat(
 
     function clearConversation() {
 
-        setMessages([]);
-
-        setConversationId(undefined);
-
         localStorage.removeItem(
             "conversationId"
         );
 
-        setLoading(false);
+        setConversationId(undefined);
 
-    }
-    async function sendMessage(message: string) {
+        setMessages([]);
+
+    } async function sendMessage(message: string) {
 
         if (!message.trim())
             return;
@@ -47,7 +44,9 @@ export default function useChat(
 
             role: "user",
 
-            content: message
+            content: message,
+
+            createdAt: new Date()
 
         };
 
@@ -96,7 +95,9 @@ export default function useChat(
 
                         role: "assistant",
 
-                        content: response.reply
+                        content: response.reply,
+
+                        createdAt: new Date()
 
                     }
 
@@ -116,7 +117,9 @@ export default function useChat(
                     role: "assistant",
 
                     content:
-                        "⚠️ Sorry, I couldn't contact the AI service. Please try again."
+                        "⚠️ Sorry, I couldn't contact the AI service. Please try again.",
+
+                    createdAt: new Date()
 
                 }
 

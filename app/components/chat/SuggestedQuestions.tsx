@@ -1,3 +1,5 @@
+"use client";
+
 interface Props {
 
     onSelect: (question: string) => void;
@@ -6,13 +8,25 @@ interface Props {
 
 const questions = [
 
-    "What services do you provide?",
+    {
+        icon: "🚚",
+        text: "What services do you provide?"
+    },
 
-    "What is your phone number?",
+    {
+        icon: "📞",
+        text: "What is your phone number?"
+    },
 
-    "What are your business hours?",
+    {
+        icon: "🕒",
+        text: "What are your business hours?"
+    },
 
-    "Do you offer door-to-door delivery?"
+    {
+        icon: "📦",
+        text: "Do you offer door-to-door delivery?"
+    }
 
 ];
 
@@ -22,30 +36,31 @@ export default function SuggestedQuestions({
 
     return (
 
-        <div
-            style={{
-                display: "flex",
-                flexWrap: "wrap",
-                gap: 10,
-                marginTop: 20
-            }}
-        >
+        <div className="suggested-questions">
 
             {questions.map(question => (
 
                 <button
-                    key={question}
-                    onClick={() => onSelect(question)}
-                    style={{
-                        padding: "10px 16px",
-                        borderRadius: 20,
-                        border: "1px solid #ddd",
-                        background: "#fff",
-                        cursor: "pointer"
-                    }}
+
+                    key={question.text}
+
+                    className="suggestion-chip"
+
+                    onClick={() =>
+
+                        onSelect(question.text)
+
+                    }
+
                 >
 
-                    {question}
+                    <span>
+
+                        {question.icon}
+
+                    </span>
+
+                    {question.text}
 
                 </button>
 

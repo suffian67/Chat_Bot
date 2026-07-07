@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import ChatPopup from "./ChatPopup";
-import "./chat.css";
-import ChatTheme from "@/config/chatTheme";
+import ChatWidget from "../chat/ChatWidget";
+import ChatTheme from "@/config/widgetTheme";
+import "@/app/styles/chat.css";
 
 interface Props {
 
@@ -15,40 +15,31 @@ export default function ChatLauncher({
     websiteId
 }: Props) {
 
-    const [open, setOpen] =
-        useState(false);
+    const [open, setOpen] = useState(false);
 
     return (
 
         <>
 
-            {
+            {open && (
 
-                open && (
+                <div className="chat-popup">
 
-                    <ChatPopup
-
+                    <ChatWidget
                         websiteId={websiteId}
-
-                        onClose={() =>
-                            setOpen(false)
-                        }
-
+                        onClose={() => setOpen(false)}
                     />
 
-                )
+                </div>
 
-            }
+            )}
 
             <button
                 className="chat-launcher"
                 onClick={() => setOpen(previous => !previous)}
                 style={{
-
                     width: ChatTheme.launcherSize,
-
                     height: ChatTheme.launcherSize
-
                 }}
             >
                 💬

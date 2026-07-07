@@ -2,7 +2,9 @@ body {
 
     margin: 0;
 
-    background: #eef2f7;
+    background: #ffffff;
+
+    overflow: hidden;
 
     font-family: Inter, system-ui, sans-serif;
 
@@ -11,12 +13,14 @@ body {
 .chat-widget {
 
     display: flex;
-
     flex-direction: column;
 
     width: 100%;
-
     height: 100%;
+
+    background: white;
+
+    border-radius: 20px;
 
     overflow: hidden;
 
@@ -570,40 +574,44 @@ body {
 
     gap: 12px;
 
-    padding: 18px;
+    padding: 16px;
+
+    background: #fff;
 
     border-top: 1px solid #e5e7eb;
 
-    background: white;
-
-
 }
+
 
 .chat-textarea {
 
     flex: 1;
 
-    resize: none;
+    min-height: 52px;
+
+    max-height: 140px;
+
+    padding: 14px 18px;
 
     border: none;
 
     outline: none;
 
-    background: #f4f6fa;
-
-    border-radius: 18px;
-
-    padding: 14px 18px;
+    resize: none;
 
     font-size: 15px;
 
-    line-height: 1.5;
+    line-height: 22px;
 
     font-family: inherit;
 
-    max-height: 140px;
+    background: #f4f6fa;
+
+    border-radius: 16px;
 
     overflow-y: auto;
+
+    box-sizing: border-box;
 
 }
 
@@ -624,9 +632,9 @@ body {
 
 .send-button {
 
-    width: 46px;
+    width: 52px;
 
-    height: 46px;
+    height: 52px;
 
     border: none;
 
@@ -634,13 +642,13 @@ body {
 
     background: #2563eb;
 
-    color: white;
+    color: #fff;
 
     font-size: 20px;
 
     cursor: pointer;
 
-    transition: .2s;
+    flex-shrink: 0;
 
 }
 
@@ -1144,27 +1152,23 @@ body {
 
     position: fixed;
 
-    right: 28px;
+    right: 24px;
 
-    bottom: 28px;
+    bottom: 24px;
 
-    width: min(420px, calc(100vw - 32px));
+    width: 420px;
 
-    height: min(720px, calc(100vh - 56px));
+    height: min(700px, calc(100vh - 48px));
 
-    background: white;
+    background: #fff;
 
-    border-radius: 22px;
+    border-radius: 20px;
 
     overflow: hidden;
 
-    box-shadow: 0 30px 80px rgba(0, 0, 0, .25);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, .18);
 
-    z-index: 9999;
-
-    display: flex;
-
-    flex-direction: column;
+    z-index: 999999;
 
 }
 

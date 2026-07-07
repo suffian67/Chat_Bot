@@ -1,10 +1,10 @@
 "use client";
 
 import { UIChatMessage } from "@/types/UIChatMessage";
-import TypingIndicator from "./TypingIndicator";
 import { useEffect, useRef } from "react";
 import WelcomeCard from "./WelcomeCard";
 import ChatMessages from "./ChatMessages";
+import TypingIndicator from "./TypingIndicator";
 
 interface Props {
 

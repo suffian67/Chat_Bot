@@ -1,17 +1,22 @@
-import ChatWidgetProvider from "./providers/ChatWidgetProvider";
-
+import "@/app/styles/chat.css";
 export default function RootLayout({
     children,
 }: {
     children: React.ReactNode;
 }) {
+
     return (
+
         <html lang="en">
+
             <body>
-                <ChatWidgetProvider>
-                    {children}
-                </ChatWidgetProvider>
+
+                {children}
+
             </body>
+
         </html>
+
     );
+
 }

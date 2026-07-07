@@ -1,4 +1,4 @@
-import { db } from "@/lib/firebase";
+import { db } from "@/services/firebase/firebase";
 import { WebsiteContent, WebsitePage, WebsiteSection } from "@/types/WebsiteContent";
 import { collection, getDocs, orderBy, query } from "firebase/firestore";
 

@@ -1,6 +1,6 @@
 "use client";
 
-import ChatTheme from "@/config/chatTheme";
+import ChatTheme from "@/config/widgetTheme";
 import ReactMarkdown from "react-markdown";
 
 interface Props {

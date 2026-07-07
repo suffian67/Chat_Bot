@@ -1,15 +1,15 @@
 "use client";
 
-import useChat from "@/app/hooks/useChat";
 import ChatHeader from "./ChatHeader";
 import ChatWindow from "./ChatWindow";
 import ChatInput from "./ChatInput";
+import useChat from "@/lib/useChat";
 
 interface Props {
 
     websiteId: string;
 
-    onClose(): void;
+    onClose?: () => void;
 
 }
 

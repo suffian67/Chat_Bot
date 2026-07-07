@@ -1,6 +1,6 @@
-import ChatConfig from "@/config/chat.config";
-import ChatTheme from "@/config/chatTheme";
-import ChatWelcome from "@/config/chatWelcome";
+import ChatConfig from "@/config/widget.config";
+import ChatTheme from "@/config/widgetTheme";
+import ChatWelcome from "@/config/widgetWelcome";
 
 interface Props {
 

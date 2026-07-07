@@ -33,7 +33,7 @@ export default function ChatInput({
         if (!textarea)
             return;
 
-        textarea.style.height = "0px";
+        textarea.style.height = "auto";
 
         textarea.style.height =
             Math.min(
@@ -68,7 +68,7 @@ export default function ChatInput({
 
                 value={message}
 
-                rows={1}
+                rows={2}
 
                 placeholder="Ask anything..."
 
